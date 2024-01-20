@@ -9,6 +9,7 @@ from lightgbm import LGBMRegressor
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_squared_error, mean_absolute_error
+import variable_evaluations as ve
 
 
 def evaluate_models(X, y):
@@ -38,12 +39,12 @@ def evaluate_models_new(X, y, plot_imp=False, save=False, num=20):
     global fitted_models
 
     models = {
-        #'LR': LinearRegression(),
-        #'KNN': KNeighborsRegressor(),
-        #'CART': DecisionTreeRegressor(),
-        #'Random Forest': RandomForestRegressor(),
-        #'Gradient Boosting': GradientBoostingRegressor(),
-        #'XGBoost': XGBRegressor(),
+        'LR': LinearRegression(),
+        'KNN': KNeighborsRegressor(),
+        'CART': DecisionTreeRegressor(),
+        'Random Forest': RandomForestRegressor(),
+        'Gradient Boosting': GradientBoostingRegressor(),
+        'XGBoost': XGBRegressor(),
         'LightGBM': LGBMRegressor()
     }
 
